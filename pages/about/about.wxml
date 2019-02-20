@@ -1,0 +1,57 @@
+<view class="page-phone">
+    <view class="header">
+      <view class="wx-title">聆心湾</view>
+      <view class="wx-desc"></view>
+      <image src="{{logosrc}}" class="logoimg"></image>
+    </view>
+
+    <view class="content">
+
+      <view class="wx-cell">
+         <view class="icon">
+            <image src="{{adrimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd" bindtap="getLocation">信工楼</view>
+         <view class="cell-fd">
+            <image src="{{jtimg}}" class="icon-postion"></image>
+         </view>
+      </view>
+
+      <view class="wx-cell">
+         <view class="icon">
+            <image src="{{clockimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd">9：00 - 18：00</view>
+      </view>
+
+      <view class="wx-cell" bindtap="calling">
+         <view class="icon">
+            <image src="{{phoneimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd">911</view>
+         <view class="cell-fd">
+           <image src="{{jtimg}}" class="icon-postion"></image>
+         </view>
+      </view>
+
+    </view>
+
+    <view class="content">
+       <view class="wx-cell">
+         <view class="icon">
+            <image src="{{picimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd">咨询图片</view>
+       </view>
+       
+       <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+       <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+          </swiper-item>
+       </block>
+       </swiper>
+       
+    </view>
+</view>
